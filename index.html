@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Basic Calculator</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="calculator">
+      <input id="display" readonly />
+      <div id="keys">
+        <button class="calculation-button" onclick="addToDisplay('+')">
+          +
+        </button>
+        <button onclick="addToDisplay('9')">9</button>
+        <button onclick="addToDisplay('8')">8</button>
+        <button onclick="addToDisplay('7')">7</button>
+        <button onclick="addToDisplay('-')" class="calculation-button">
+          -
+        </button>
+        <button onclick="addToDisplay('6')">6</button>
+        <button onclick="addToDisplay('5')">5</button>
+        <button onclick="addToDisplay('4')">4</button>
+        <button onclick="addToDisplay('*')" class="calculation-button">
+          *
+        </button>
+        <button onclick="addToDisplay('3')">3</button>
+        <button onclick="addToDisplay('2')">2</button>
+        <button onclick="addToDisplay('1')">1</button>
+        <button onclick="addToDisplay('/')" class="calculation-button">
+          /
+        </button>
+        <button onclick="addToDisplay('0')">0</button>
+        <button onclick="addToDisplay('.')">.</button>
+        <button onclick="deleteOneNumber()" id="back-button">
+          <img src="back-button.png" alt="X" />
+        </button>
+      </div>
+      <div id="eval-button">
+        <button
+          onclick="cancel()"
+          class="calculation-button"
+          id="cancel-button"
+        >
+          C
+        </button>
+        <button onclick="equal()" class="calculation-button" id="equal-button">
+          =
+        </button>
+      </div>
+    </div>
+
+    <script src="calculator.js"></script>
+  </body>
+</html>
